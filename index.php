@@ -1,6 +1,38 @@
 <?php
   include "header.php";
+?>
+  <?php
+// Include the database connection code
+include "db.php";
 
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Insert the form data into the "replies" table
+    $sql = "INSERT INTO `replies` (`name`, `email`, `message`) VALUES ('$name', '$email', '$message')";
+    
+    if (mysqli_query($con, $sql)) {
+        // Data inserted successfully
+        echo "
+                <div class='alert alert-success' role='alert'>
+                    Thank you for contacting us! We will get back to you soon.
+                </div>
+              ";
+    } else {
+        // Error in inserting data
+        echo "
+                <div class='alert alert-danger' role='alert'>
+                    Oops! Something went wrong. Please try again later.
+                </div>
+              ";
+    }
+}
+
+// Close the database connection
+mysqli_close($con);
 ?>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -390,7 +422,7 @@
 
 <div class="container mt-5">
         <h1 class="text-center">Contact Us</h1>
-        <form method="POST" action="process_contact.php">
+        <form method="POST" action="index.php">
             <div class="mb-3">
                 <label for="name" class="form-label">Your Name</label>
                 <input type="text" class="form-control" id="name" name="name" required>

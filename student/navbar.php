@@ -27,7 +27,7 @@
     <!-- omkar shelke -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">GreenWave Innovation</a>
+    <a class="navbar-brand" href="../index.php">GreenWave Innovation</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,16 +37,16 @@
           <!-- <a class="nav-link active" aria-current="page" href="#"></a> -->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#educators">my profile</a>
+          <a class="nav-link" href="student_profile.php">my profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#testinomials">enroll a course</a>
+          <a class="nav-link" href="enroll_course.php">enroll a course</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">download notes</a>
+          <a class="nav-link" href="download_notes.php">download notes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">log out</a>
+          <a class="nav-link" href="../index.php">log out</a>
         </li>
       </ul>
     </div>

@@ -49,15 +49,17 @@
           <a class="nav-link" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#faq">FAQ</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="colleges.php">Colleges</a>
         </li>
       </ul>
       <!-- Move the login button to the top right corner -->
-      <div class="ml-auto">
-        <a href="login.php" target="_blank">
-          <button type="button" class="btn btn-success">Login</button>
-        </a>
-      </div>
+      <div class="position-absolute top-0 end-0 p-3 m-0 p-0">
+        <!-- Place your login button here -->
+        <a href="student/student_signin.php"><input type="submit" value="student login" name="submit" class="btn btn-success" style="overflow-y: hidden;"></a>
+    </div>
     </div>
   </div>
 </nav>

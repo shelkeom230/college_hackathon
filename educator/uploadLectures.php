@@ -6,6 +6,8 @@ include "db.php";
 
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
+    $lectitle=$_POST['lectitle'];
+    $category=$_POST['category'];
 
     // Check if the lecture file was uploaded successfully
     if (isset($_FILES['lect']) && $_FILES['lect']['error'] === UPLOAD_ERR_OK) {
@@ -16,7 +18,7 @@ if (isset($_POST['submit'])) {
 
         // Move the file
         if (move_uploaded_file($lect_tmp_name, $lect_destination)) {
-            $sql = "INSERT INTO `lectures`(`title`, `lect`) VALUES ('$title', '$lect_destination')";
+            $sql = "INSERT INTO `lectures`(`title`,`lectitle`,`category`, `lect`) VALUES ('$title','$lectitle','$category', '$lect_destination')";
             $result = mysqli_query($con, $sql);
             if ($result) {
                 echo '<div class="alert alert-success" role="alert">
@@ -56,6 +58,10 @@ if (isset($_POST['submit'])) {
   <div class="mb-3" style="width: 600px;height:600px;border: 2px;border: radius 5px;margin-left:400px;margin-right:350px;margin-top:50px;margin-bottom:50px;">
   <label for="exampleFormControlInput1" class="form-label">course title</label>
   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="intro to biodiviersity"  name="title" required >
+  <label for="exampleFormControlInput1" class="form-label">lecture title</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="intro to biodiviersity"  name="lectitle" required >
+  <label for="exampleFormControlInput1" class="form-label">course category (environment/clean and green technology)</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="intro to biodiviersity"  name="category" required >
   
   <label for="exampleFormControlInput1" class="form-label">upload lecture (mp4 format)</label>
   <input type="file" class="form-control" id="exampleFormControlInput1" name="lect"  required>
