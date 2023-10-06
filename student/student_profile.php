@@ -7,7 +7,7 @@ include "navbar.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>My Profile</title>
+    <title>Student || student profile</title>
 </head>
 <body>
     <div class="container">
@@ -27,7 +27,7 @@ include "navbar.php";
                         // Assuming you have a session or some way to identify the current user
                         // $userId = $_SESSION['user_id'];
 
-                        $query = "SELECT username, password FROM student_list WHERE mem_id = 3";
+                        $query = "SELECT username, password FROM student_list WHERE username = 'kartik'";
                         $result = mysqli_query($connection, $query);
 
                         if (mysqli_num_rows($result) > 0) {

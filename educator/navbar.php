@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenWaveInnovation || spcoet</title>
+    <title>Educator || navbar</title>
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -34,13 +34,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="profile.php">my profile</a>
+          <a class="nav-link" href="educator_profile.php">my profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="uploadCourse.php">upload a course</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="uploadLectures.php">upload lectures</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../index.php">log out</a>
